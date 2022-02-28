@@ -48,12 +48,15 @@ export const Points = (props: { players: string[] }) => {
                     {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((item) => (
                       <Controller
                         name={`${player}.${index}${item}`}
-                        defaultValue={0}
+                        defaultValue={''}
                         control={formMethods.control}
                         render={({ field: { onChange, value } }) => (
                           <TextField
                             onChange={onChange}
                             value={value}
+                            inputProps={{
+                              patterns: '[0-9]*'
+                            }}
                             type="number"
                             variant="outlined"
                             sx={{ margin: '0.25rem' }}
