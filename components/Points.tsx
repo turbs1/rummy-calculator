@@ -55,7 +55,8 @@ export const Points = (props: { players: string[] }) => {
                             onChange={onChange}
                             value={value}
                             inputProps={{
-                              patterns: '[0-9]*'
+                              patterns: '[0-9]*',
+                              inputMode: 'numeric'
                             }}
                             type="number"
                             variant="outlined"
